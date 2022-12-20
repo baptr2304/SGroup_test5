@@ -1,0 +1,184 @@
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.item1 {
+    width: 30%;
+    height: 50vh;
+    background-image: url("https://images.unsplash.com/photo-1669672764165-9fd29232ff62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+    background-size: cover;
+    color: rgb(1, 57, 95);
+    justify-content: center;
+    position: relative;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.item1 p {
+    font-size: 20px;
+    letter-spacing: 1.3;
+    text-align: center;
+    position: absolute;
+    bottom: -30%;
+    transition: 0.5s bottom;
+}
+
+.box-hidden {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: -20%;
+    visibility: hidden;
+    transition-property: bottom;
+    transition: 0.5s;
+}
+
+.box-hidden__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -100%;
+    transition-property: bottom;
+    transition: 0.5s linear;
+    box-sizing: border-box;
+
+}
+
+.ic_content i+i {
+    padding-left: 5px;
+}
+
+.item1:hover p {
+    transition: 0.5s bottom;
+    bottom: 50%;
+    visibility: visible;
+}
+
+.item1:hover .box-hidden {
+    visibility: visible;
+    transition: 0.5s linear;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.item1:hover .box-hidden__content {
+    visibility: visible;
+    transform: translateY(-100%);
+}
+
+.item2 {
+    width: 30%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    transition-property: opacity;
+    transition: 0.35s linear;
+    opacity: 1;
+}
+
+.item2 img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    transition-property: width, height;
+    transition: 0.25s linear;
+}
+
+.item2:hover img {
+    width: 100%;
+    height: 100%;
+    transition-property: width, height;
+    transition: 0.25s linear;
+}
+
+.item2__content {
+    position: absolute;
+    color: #ffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line {
+    width: 70%;
+    height: 1px;
+    background-color: #ffff;
+}
+
+.left-line {
+    transform: rotate(0deg);
+    transition: 0.35s linear;
+}
+
+.right-line {
+    transform: rotate(0deg);
+    transition: 0.35s linear;
+}
+
+.item2__content h2 {
+    transition-property: padding-bottom;
+    transition: 0.35s linear;
+    padding-bottom: 30px;
+}
+
+.item2__content p {
+    transition-property: padding-top;
+    transition: 0.35s linear;
+    padding: 30px 20px 0 20px;
+}
+
+.item2:hover {
+    transition-property: opacity;
+    transition: 0.35s linear;
+    opacity: 0.7;
+}
+
+.item2:hover h2 {
+    transition: 0.35s linear;
+    transform: translateY(30%);
+}
+
+.item2:hover p {
+    transition: 0.35s linear;
+    transform: translateY(-30%);
+}
+
+.item2:hover .left-line {
+    transform: rotate(45deg);
+    transition: 0.35s linear;
+}
+
+.item2:hover .right-line {
+    transform: rotate(-45deg);
+    transition: 0.35s linear;
+}
